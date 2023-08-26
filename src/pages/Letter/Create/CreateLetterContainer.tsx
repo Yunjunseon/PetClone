@@ -5,7 +5,7 @@ import { WriteBox } from './components/style/WriteFormStyle';
 import { ContentForm, EmotionForm, RadioForm, TitleForm, ImageUpload } from './components';
 import { activeTagAtom, isUploadAtom } from '../../../atom/atom';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { postAlbum, putAlbum } from './WriteAlbumApi';
+import { postAlbum, putAlbum } from './CreateLetterApi';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { isAlbumDetail } from '../../../type/AlbumType';
 

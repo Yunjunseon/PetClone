@@ -2,17 +2,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './pages/NotFound/NotFound';
 import Main from './pages/Main/Main/Main';
 import Login from './pages/Login/Login';
-import MemoryPage from './pages/MemoryPage/MemoryPage';
 import MyPage from './pages/MyPage/MyPage';
-import ReviseInfo from './pages/MyPage/ReviseInfo/ReviseInfo';
-import FuneralPage from './pages/Main/FuneralPage/FuneralPage';
-import MyAlbumContainer from './pages/MemoryPage/MyAlbum/MyAlbumContainer';
-import QuestionAlbumContainer from './pages/MemoryPage/QuestionsAlbum/QuestionAlbumContainer';
-import SharedAlbumContainer from './pages/MemoryPage/SharedAlbum/SharedAlbumContainer';
-import WriteAlbum from './pages/Letter/Create/WriteAlbum';
-import MemoryDetail from './pages/MemoryDetail/MemoryDetail';
 import UnAuthorized from './pages/Unauthorized/Unauthorized';
 import SignUp from './pages/SignUp/SignUp/Singup';
+import ActivationFirst from './pages/SignUp/ActivationSecond/ActivationFirst';
+import ActivationSecond from './pages/SignUp/ActivationSecond/ActivationSecond';
+import ActivationThird from './pages/SignUp/ActivationSecond/ActivationSecond';
+import CalendarList from './pages/Letter/CalendarList/CalendarList';
+import Create from './pages/Letter/Create/Create';
+import DetailView from './pages/Letter/DetailView/DetailView';
 
 const Router = () => {
   return (
@@ -25,16 +23,16 @@ const Router = () => {
 
         {/* SignUp */}
         <Route path="/signup" element={<SignUp />}>
-          <Route path="activationFirst" element={<SignUp />} />
-          <Route path="activationSecond" element={<SignUp />} />
-          <Route path="activationThird" element={<SignUp />} />
+          <Route path="activationFirst" element={<ActivationFirst />} />
+          <Route path="activationSecond" element={<ActivationSecond />} />
+          <Route path="activationThird" element={<ActivationThird />} />
         </Route>
 
         {/* Letter */}
-        <Route path="/letter" element={<MemoryPage />}>
-          <Route path="create" element={<MyAlbumContainer />} />
-          <Route path="calendarList" element={<QuestionAlbumContainer />} />
-          <Route path="calendarView/:id" element={<SharedAlbumContainer />} />
+        <Route path="/letter" element={<SignUp />}>
+          <Route path="create" element={<Create />} />
+          <Route path="calendarList" element={<CalendarList />} />
+          <Route path="calendarList/:id" element={<DetailView />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 

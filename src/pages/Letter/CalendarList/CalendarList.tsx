@@ -2,7 +2,7 @@ import Navbar from '../../components/layout/MainPageNavbar';
 import Footer from '../../components/layout/Footer';
 import { LoginPage } from './components';
 
-const DetailView = () => {
+const CalendarList = () => {
   return (
     <div>
       <Navbar key="navbar" />
@@ -12,4 +12,4 @@ const DetailView = () => {
   );
 };
 
-export default DetailView;
+export default CalendarList;
