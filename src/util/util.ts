@@ -1,3 +1,5 @@
+/*원하는 유틸리티를 추가하세요*/
+
 export const mappingTag = (tags: string[]) => {
   if (tags.length === 0) {
     return [];
