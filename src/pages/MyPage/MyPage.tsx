@@ -1,6 +1,6 @@
 import Navbar from '../../components/layout/MainPageNavbar';
 import Footer from '../../components/layout/Footer';
-import { Profile, SlicePictures, Stamp, Question, LinkPage } from './components';
+import { Profile, SlicePictures, Stamp, Question, LinkPage, MyTable } from './components';
 import styled from 'styled-components';
 
 const MyPageContainer = styled.div`
@@ -33,6 +33,7 @@ const MyPage = () => {
         </RightWrapper>
       </MainContentWrapper>
       <LinkPage />
+      <MyTable />
       <Footer />
     </MyPageContainer>
   );
